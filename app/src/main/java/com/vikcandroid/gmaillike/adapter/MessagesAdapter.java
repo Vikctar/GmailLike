@@ -259,6 +259,18 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Messag
 
         public MessagesViewHolder(View itemView) {
             super(itemView);
+            from = (TextView) itemView.findViewById(R.id.from);
+            subject = (TextView) itemView.findViewById(R.id.txt_primary);
+            message = (TextView) itemView.findViewById(R.id.txt_secondary);
+            iconText = (TextView) itemView.findViewById(R.id.icon_text);
+            timestamp = (TextView) itemView.findViewById(R.id.timestamp);
+            iconBack = (RelativeLayout) itemView.findViewById(R.id.icon_back);
+            iconFront = (RelativeLayout) itemView.findViewById(R.id.icon_front);
+            iconImp = (ImageView) itemView.findViewById(R.id.icon_star);
+            imgProfile = (ImageView) itemView.findViewById(R.id.icon_profile);
+            messageContainer = (LinearLayout) itemView.findViewById(R.id.message_container);
+            iconContainer = (RelativeLayout) itemView.findViewById(R.id.icon_container);
+            itemView.setOnLongClickListener(this);
         }
 
         @Override
